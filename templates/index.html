@@ -14,14 +14,15 @@
                 GitHub Codespaces <span class="heart">♥️</span> Flask
             </p>
             <p class="small">
-                Edit <code>templates/index.html</code> and refresh to see your changes!
+                Enter two numbers to add them together!
             </p>
             <form method="POST">
-                <input type="text" name="user_input" placeholder="Enter your text">
-                <button type="submit">Submit</button>
+                <input type="number" step="any" name="num1" placeholder="Enter first number" required>
+                <input type="number" step="any" name="num2" placeholder="Enter second number" required>
+                <button type="submit">Add Numbers</button>
             </form>
-            {% if user_input %}
-                <p>You entered: {{ user_input }}</p>
+            {% if result is not none %}
+                <p>The sum is: {{ result }}</p>
             {% endif %}
         </header>
     </div>
